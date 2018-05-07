@@ -1,0 +1,6 @@
+# Hide your personal api key in a simple js file
+#
+# var apiKey = 'YOUR_KEY';
+#
+######################################
+api.js
