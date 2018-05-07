@@ -22,19 +22,9 @@ function searchWeather() {
             var data = JSON.parse(http.responseText);
             var weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
             weatherData.temperature = data.main.temp;
-            updateWeather(weatherData);
         } else if (http.readyState === XMLHttpRequest.DONE) {
             alert('Something went wrong!');
         }
     };
     http.send();
-}
-
-function updateWeather(weatherData) {
-    weatherCity.textContent = weatherData.cityName;
-    weatherDescription.textContent = weatherData.description;
-    weatherTemperature.textContent = weatherData.temperature;
-
-    loadingText.style.display = 'none';
-    weatherBox.style.display = 'block';
 }
