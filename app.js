@@ -3,12 +3,13 @@
 searchButton.addEventListener('click', searchWeather);
 
 function searchWeather() {
-    loadingText.style.display = 'block';
     weatherBox.style.display = 'none';
     var cityName = searchCity.value;
     if (cityName.trim().length == 0) {
         return alert('Please enter a City Name');
     }
+
+    loadingText.style.display = 'block';
     var http = new XMLHttpRequest();
     var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric&appid=' + apiKey;
     var method = 'GET';
