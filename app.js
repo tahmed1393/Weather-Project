@@ -8,7 +8,9 @@ function searchWeather() {
     if (cityName.trim().length == 0) {
         return alert('Please enter a City Name');
     }
-
+    if (typeof apiKey == 'undefined') {
+        return alert("Please add your personal openweathermap API key to a file called api.js in this project's folder");
+    }
     loadingText.style.display = 'block';
     var http = new XMLHttpRequest();
     var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=metric&appid=' + apiKey;
