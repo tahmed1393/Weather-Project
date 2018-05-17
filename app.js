@@ -2,12 +2,6 @@
 
 searchButton.addEventListener('click', searchWeather);
 
-/*
-    Ugh, I couldn't grab it from the browser's developer tools.
-    It was trapped in the searchWeather's scope.
-
-    Now it's defined at the global level so it will be available to the browser, even after the function ends.
-*/
 var weatherData;
 function searchWeather() {
     weatherBox.style.display = 'none';

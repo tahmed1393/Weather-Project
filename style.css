@@ -86,3 +86,7 @@ header h1 {
     margin: 100px auto auto;
     display: none;
 }
+
+#sun {
+    width: 150px;
+}

@@ -7,22 +7,18 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            I created the folder /images and added a picture of the sun that looks like it was drawn by a toddler.
-            Tayeb is welcome to replace it though! :D
-            It has a transparent background, so it will fit into the project well.
+            Jesus... that sun was too big! Let's change the size of it with some CSS.
 
     */
 
     this.partlyCloudy = function() {
         console.log("Partly cloudy");
         
-        // Creating the HTML element for the sun
         var sun = document.createElement("img");
-
-        // Setting the src attribute to the ugly sun picture
         sun.src = "images/sun.png";
+        // Adding an ID so that the CSS can find it
+        sun.id = "sun";
 
-        // Adding it to the document so it will actually display, I want it next to the temperature read out
         var weatherReadout = document.getElementById("weather");
         weatherReadout.appendChild(sun);
 
