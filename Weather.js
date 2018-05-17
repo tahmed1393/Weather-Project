@@ -7,7 +7,16 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            This is the second step I had to do to fix Mac's stupid capitalization git glitch. Sorry, please ignore this too.
+            Okay, hopefully that fixed it. Anyways... back to teaching.
+
+            You may have noticed that the sun is the right size now, but it's not in a cool spot.
+
+            So, I altered the CSS of the sun element so that it would have absolute positioning.
+            That means that nothing is going to change the position of the sun.
+            It's always going to be 220px from the top and 75px from the right.
+
+            Try resizing the window and you'll notice that it stays there, despite things moving on the page.
+            You'll have to do some research if you'd like it to be positioned relative to another element or something like that.
 
     */
 

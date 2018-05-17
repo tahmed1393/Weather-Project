@@ -89,4 +89,7 @@ header h1 {
 
 #sun {
     width: 150px;
+    position: absolute;
+    top: 220px;
+    right: 75px;
 }
