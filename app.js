@@ -2,6 +2,13 @@
 
 searchButton.addEventListener('click', searchWeather);
 
+/*
+    Ugh, I couldn't grab it from the browser's developer tools.
+    It was trapped in the searchWeather's scope.
+
+    Now it's defined at the global level so it will be available to the browser, even after the function ends.
+*/
+var weatherData;
 function searchWeather() {
     weatherBox.style.display = 'none';
     var cityName = searchCity.value;
@@ -20,7 +27,7 @@ function searchWeather() {
     http.onreadystatechange = function() {
         if (http.readyState == XMLHttpRequest.DONE && http.status === 200) {
             var data = JSON.parse(http.responseText);
-            var weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
+            weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
             weatherData.temperature = data.main.temp;
         } else if (http.readyState === XMLHttpRequest.DONE) {
             alert('Something went wrong!');

@@ -7,21 +7,25 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            I am contributing my weather pattern as an attribute of the weather class.
-            If Tayeb wants to go another direction, he'll have my coded function and he can just move things around.
-            
-            I don't want to make the weather selector, that would be a good learning experience for him.
-            So in the meantime, testing will be done by calling the occurance in the developer tools' console.
-
-        EXAMPLE:
-            app.js, line 23 currently creates the instance weatherData.
-            Testing this in console would be weatherData.partlyCloudy();
+            I created the folder /images and added a picture of the sun that looks like it was drawn by a toddler.
+            Tayeb is welcome to replace it though! :D
+            It has a transparent background, so it will fit into the project well.
 
     */
 
     this.partlyCloudy = function() {
         console.log("Partly cloudy");
         
+        // Creating the HTML element for the sun
+        var sun = document.createElement("img");
+
+        // Setting the src attribute to the ugly sun picture
+        sun.src = "images/sun.png";
+
+        // Adding it to the document so it will actually display, I want it next to the temperature read out
+        var weatherReadout = document.getElementById("weather");
+        weatherReadout.appendChild(sun);
+
     };
 
 }
