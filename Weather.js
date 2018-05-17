@@ -7,7 +7,7 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            So apparently Mac treats capitalization very strangely, so I'm trying a workaround for my annoying git commit suggestions here. Please ignore.
+            This is the second step I had to do to fix Mac's stupid capitalization git glitch. Sorry, please ignore this too.
 
     */
 
