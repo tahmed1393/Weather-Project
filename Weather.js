@@ -7,11 +7,11 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            So far we only have the sun, it's not much of a "partly cloudy" forecast is it?
+            Everything has been static so far... It's kinda boring.
 
-            Let's make a cloud, just one for now.
+            Let's animate the cloud. Let's make him move along slowly.
 
-            You saw how I added an image before, so I'm just going to do it all in one commit this time.
+            We'll start by making a timer that will run a function everything 2 seconds.
     */
 
     this.partlyCloudy = function() {
@@ -24,6 +24,8 @@ function Weather(cityName, description) {
         var cloud = document.createElement("img");
         cloud.src = "images/cloud.png";
         cloud.id = "cloud";
+
+        setInterval(function(){ console.log("Two seconds have passed. Hooray!s"); }, 2000);
 
         var weatherReadout = document.getElementById("weather");
         weatherReadout.appendChild(sun);
