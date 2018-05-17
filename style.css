@@ -93,3 +93,10 @@ header h1 {
     top: 220px;
     right: 75px;
 }
+
+#cloud {
+    width: 50px;
+    position: absolute;
+    top: 220px;
+    right: 75px;
+}

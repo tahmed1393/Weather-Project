@@ -7,17 +7,11 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            Okay, hopefully that fixed it. Anyways... back to teaching.
+            So far we only have the sun, it's not much of a "partly cloudy" forecast is it?
 
-            You may have noticed that the sun is the right size now, but it's not in a cool spot.
+            Let's make a cloud, just one for now.
 
-            So, I altered the CSS of the sun element so that it would have absolute positioning.
-            That means that nothing is going to change the position of the sun.
-            It's always going to be 220px from the top and 75px from the right.
-
-            Try resizing the window and you'll notice that it stays there, despite things moving on the page.
-            You'll have to do some research if you'd like it to be positioned relative to another element or something like that.
-
+            You saw how I added an image before, so I'm just going to do it all in one commit this time.
     */
 
     this.partlyCloudy = function() {
@@ -27,8 +21,13 @@ function Weather(cityName, description) {
         sun.src = "images/sun.png";
         sun.id = "sun";
 
+        var cloud = document.createElement("img");
+        cloud.src = "images/cloud.png";
+        cloud.id = "cloud";
+
         var weatherReadout = document.getElementById("weather");
         weatherReadout.appendChild(sun);
+        weatherReadout.appendChild(cloud);
 
     };
 
