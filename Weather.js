@@ -7,10 +7,17 @@ function Weather(cityName, description) {
 
     /*
         Dev note:
-            As you can tell by the console logs, the cloud will travel for eternity...
-            That's a waste of our processing power, so let's detect when it's passed our window's view and destroy the cloud.
+            Alright, now you've seen how it's done, you can do this!
 
-            Also, let's put the old code together in a tightly packed line.
+            Now I want you to take over. You can scrap all of this and make your own partly cloudy solution...
+            Or you can continue to build this.
+
+            If you put that cloud code into a function, you could loop over it (i.e. a for-loop) to create multiple!
+            You can also adjust the top positioning style, to get them at different heights.
+
+            Also, clouds tend to appear in random positions, maybe you could make use of the random function?
+            It would be really cool to add a loop to add these clouds at random heights, perhaps?
+            https://www.w3schools.com/js/js_random.asp
     */
 
     this.partlyCloudy = function() {
@@ -33,16 +40,12 @@ function Weather(cityName, description) {
             cloud.style.right = newRight + "px";
             console.log("New Right:", newRight);
 
-            // If the right positioning number is greater than or equal to the window's width, it's gotta go
-            // Notice I kept newRight as a variable because it doesn't have the "px" (that would have made it a string).
-            // It's a number so it's compatible with this comparision
             if ( newRight >= window.innerWidth ) {
                 clearInterval(cloudInterval);
                 weatherReadout.removeChild(cloud);
             }
 
         };
-        // I had to define the interval as a variable so that I could grab it with the clearInterval function
         var cloudInterval = setInterval(moveCloud, 2000);
 
         var weatherReadout = document.getElementById("weather");
