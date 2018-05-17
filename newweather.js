@@ -4,6 +4,25 @@ function Weather(cityName, description) {
     this.cityName = cityName;
     this.description = description;
     this._temperature = '';
+
+    /*
+        Dev note:
+            So apparently Mac treats capitalization very strangely, so I'm trying a workaround for my annoying git commit suggestions here. Please ignore.
+
+    */
+
+    this.partlyCloudy = function() {
+        console.log("Partly cloudy");
+        
+        var sun = document.createElement("img");
+        sun.src = "images/sun.png";
+        sun.id = "sun";
+
+        var weatherReadout = document.getElementById("weather");
+        weatherReadout.appendChild(sun);
+
+    };
+
 }
 
 Object.defineProperty(Weather.prototype, 'temperature', {
