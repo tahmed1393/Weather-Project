@@ -4,6 +4,26 @@ function Weather(cityName, description) {
     this.cityName = cityName;
     this.description = description;
     this._temperature = '';
+
+    /*
+        Dev note:
+            I am contributing my weather pattern as an attribute of the weather class.
+            If Tayeb wants to go another direction, he'll have my coded function and he can just move things around.
+            
+            I don't want to make the weather selector, that would be a good learning experience for him.
+            So in the meantime, testing will be done by calling the occurance in the developer tools' console.
+
+        EXAMPLE:
+            app.js, line 23 currently creates the instance weatherData.
+            Testing this in console would be weatherData.partlyCloudy();
+
+    */
+
+    this.partlyCloudy = function() {
+        console.log("Partly cloudy");
+        
+    };
+
 }
 
 Object.defineProperty(Weather.prototype, 'temperature', {
