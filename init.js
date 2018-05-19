@@ -15,4 +15,8 @@ document.getElementById('city')
     if (event.keyCode === 13) {
         document.getElementById('button').click();
     }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f1ca49741f438493497d726b190418c9d0b36ee5
