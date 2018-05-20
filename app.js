@@ -2,6 +2,7 @@
 
 searchButton.addEventListener('click', searchWeather);
 
+var weatherData;
 function searchWeather() {
     weatherBox.style.display = 'none';
     var cityName = searchCity.value;
@@ -20,7 +21,7 @@ function searchWeather() {
     http.onreadystatechange = function() {
         if (http.readyState == XMLHttpRequest.DONE && http.status === 200) {
             var data = JSON.parse(http.responseText);
-            var weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
+            weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
             weatherData.temperature = data.main.temp;
         } else if (http.readyState === XMLHttpRequest.DONE) {
             alert('Something went wrong!');
