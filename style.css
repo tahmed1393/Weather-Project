@@ -4,14 +4,15 @@ body {
     padding: 0;
     margin: 0;
     font-family: Helvetica Neue, Helvetica, Arial;
+    background-color: #92a8d1;
 }
 
 header {
     height: 100px;
-    background-color: lightblue;
+    background-color: black;
     text-align: center;
     padding-top: 20px;
-    box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #1e90ff;
 }
 
 header h1 {
