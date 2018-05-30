@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Helvetica Neue, Helvetica, Arial;
-    background-color: #92a8d1;
+    background-color:url(../images/weatherback.jpg);
 }
 
 header {
