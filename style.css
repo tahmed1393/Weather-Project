@@ -43,7 +43,7 @@ header h1 {
 }
 
 #search label {
-    border: 1px solid rgb(119, 194, 119);
+    border: 1px solid rgb(62, 190, 62);
     background-image: url(../Weather-Project/images/headerbkg1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -53,7 +53,7 @@ header h1 {
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 	font-size: 20px;
     font-weight: normal;
-    color: rgb(119, 194, 119);
+    color: rgb(62, 190, 62);
 }
 
 #search input {
@@ -70,7 +70,7 @@ header h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 500%;
-    border: 2px solid rgb(119, 194, 119);
+    border: 2px solid rgb(62, 190, 62);
     border-radius: 3px;
     cursor: pointer;
     color: white;
